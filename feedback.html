@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tech Start-up — Зворотній зв'язок</title>
+</head>
+<body>
+<header>
+<h1>Tech Start-up</h1>
+<img src="logo-placeholder.png" alt="Логотип Tech Start-up" width="120">
+<nav>
+<ul>
+<li><a href="index.html">Головна</a></li>
+<li><a href="projects.html">Проєкти</a></li>
+<li><a href="feedback.html">Зворотній зв'язок</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main>
+<article>
+<h2>Форма зворотнього зв'язку</h2>
+<form>
+<fieldset>
+<legend>Персональна інформація</legend>
+
+
+<label for="surname">Прізвище та ім'я:</label><br>
+<input type="text" id="surname" name="surname" required><br>
+
+
+<label for="email">E-mail:</label><br>
+<input type="email" id="email" name="email" required><br>
+
+
+<label for="age">Вік:</label><br>
+<input type="number" id="age" name="age" min="0" max="120" required><br>
+
+
+<label for="education">Освіта:</label><br>
+<select id="education" name="education">
+<option value="повна">повна</option>
+<option value="неповна">неповна</option>
+<option value="вища">вища</option>
+<option value="професійна">професійна</option>
+</select><br>
+
+
+<p>Інтереси:</p>
+<label><input type="checkbox" name="interests" value="науковець"> науковець</label><br>
+<label><input type="checkbox" name="interests" value="інвестор"> інвестор</label><br>
+<label><input type="checkbox" name="interests" value="промоутер"> промоутер</label><br>
+<label><input type="checkbox" name="interests" value="держслужбовець"> держслужбовець</label><br>
+</fieldset>
+
+
+<label for="purpose">Мета зворотнього зв'язку:</label><br>
+<select id="purpose" name="purpose">
+<option value="співпраця">співпраця</option>
+<option value="скарга">скарга на порушення</option>
+<option value="пропозиція">пропозиція</option>
+<option value="помилка">помилка</option>
+</select><br>
+
+
+<label for="details">Детально:</label><br>
+<textarea id="details" name="details" cols="60" rows="6" maxlength="1000"></textarea><br>
+
+
+<label><input type="checkbox" name="consent" required> Я даю згоду на обробку інформації</label><br>
+
+
+<button type="submit">Відправити</button>
+<button type="reset">Очистити</button>
+</form>
+</article>
