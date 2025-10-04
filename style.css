@@ -1,0 +1,300 @@
+/* === Загальні стилі === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 100px; /* щоб контент не потрапляв під фіксований хедер */
+}
+
+
+/* === Верхнє меню === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 18px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Додає простір між логотипом і навігацією */
+  width: 100%;
+}
+
+/* === Логотип і назва === */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title img {
+  width: 55px;
+  height: auto;
+}
+
+.logo-title h1 {
+  font-size: 1.6rem;
+  color: #111;
+  font-weight: 700;
+}
+
+/* === Меню === */
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* === Кнопки у правій частині === */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 40px; /* Додає відступ між меню і кнопками */
+}
+
+.btn-outline,
+.btn-filled {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-filled {
+  background: #007bff;
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.25);
+}
+
+.btn-filled:hover {
+  background: #00BFFF;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+/* === Розділ "Про нас" === */
+#about {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#about h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+#about ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#about li {
+  margin-bottom: 6px;
+}
+
+#about p {
+  margin-top: 10px;
+}
+
+#about strong {
+  color: #007bff;
+}
+
+/* === Засновники === */
+#founders {
+  max-width: 850px;
+  margin: 50px auto;
+  padding: 25px 35px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease;
+}
+
+/* Блок засновників зміщується праворуч на 2% при фокусі */
+#founders:focus-within {
+  transform: translateX(2%);
+  transition: transform 0.4s ease;
+}
+
+#founders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#founders caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#founders th,
+#founders td {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+#founders th {
+  background: #f1f5fb;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+}
+
+/* === Відгуки === */
+#reviews {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px 35px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#reviews h2 {
+  margin-bottom: 20px;
+}
+
+blockquote {
+  border-left: 3px solid #007bff;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+blockquote footer {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* === Контакти === */
+aside {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px 35px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+aside h3 {
+  margin-bottom: 10px;
+}
+
+aside a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+/* Виділення тексту адреси та телефонів: через 2 сек шрифт і фон підсилюється на 10% */
+aside address::selection,
+aside a::selection {
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 110%;
+  transition: all 2s ease;
+}
+
+/* === Футер === */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Hi-Tech Emoji === */
+.hitech {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* === Адаптація для мобільних === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+}

@@ -4,27 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Start-up — Головна</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1>Tech Start-up</h1>
-    <img src="logo.png" alt="Логотип Tech Start-up" width="120">
-  <nav>
-  <ul>
-    <li><a href="index.html">Головна</a></li>
-    <li><a href="projects.html">Проєкти</a></li>
-    <li><a href="#reviews">Відгуки про нас</a></li>
-    <li><a href="feedback.html">Зворотній зв'язок</a></li>
-  </ul>
-</nav>
+    <div class="header-container">
+      <div class="logo-title">
+        <img src="image/logo.png" alt="Логотип Tech Start-up" class="logo">
+        <h1>Tech Start-up</h1>
+      </div>
 
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="projects.html">Проєкти</a></li>
+          <li><a href="#reviews">Відгуки</a></li>
+          <li><a href="feedback.html">Зворотній зв’язок</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="#cabinet" class="btn-filled">Перейти у власний кабінет</a>
+          <a href="#register" class="btn-outline">Зареєструватися</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section id="about">
       <h2>Наша мета</h2>
       <p>Tech Start-up створений для впровадження інноваційних технологій, що покращують якість життя та розвивають сучасне суспільство.</p>
+
+      <p>🚀🤖💡 — Ми живемо у світі високих технологій, тому кожен наш крок спрямований у майбутнє!</p>
 
       <h3>Завдання для досягнення мети:</h3>
       <ul>
@@ -35,15 +46,13 @@
 
       <p><strong>Наш девіз:</strong> <em>Інновації — це майбутнє, яке ми створюємо сьогодні.</em></p>
 
-      <p>
-        <a href="#cabinet" role="button">Перейти у власний кабінет</a> |
-        <a href="#register" role="button">Зареєструватись</a>
-      </p>
+      <!-- 💡 Залишаємо лише цей блок -->
+      
     </section>
 
     <section id="founders">
       <h2>Засновники</h2>
-      <table border="1">
+      <table>
         <caption>Засновники Tech Start-up</caption>
         <thead>
           <tr>
@@ -66,20 +75,19 @@
         </tfoot>
       </table>
     </section>
+
+    <section id="reviews">
+      <h2>Відгуки про нас</h2>
+      <blockquote>
+        <p>"Tech Start-up допоміг мені знайти інвестора для мого проєкту!"</p>
+        <footer>— Ірина, підприємець</footer>
+      </blockquote>
+      <blockquote>
+        <p>"Найкраща команда для співпраці у сфері інновацій."</p>
+        <footer>— Максим, розробник</footer>
+      </blockquote>
+    </section>
   </main>
-
-  <section id="reviews">
-  <h2>Відгуки про нас</h2>
-  <blockquote>
-    <p>"Tech Start-up допоміг мені знайти інвестора для мого проєкту!"</p>
-    <footer>— Ірина, підприємець</footer>
-  </blockquote>
-  <blockquote>
-    <p>"Найкраща команда для співпраці у сфері інновацій."</p>
-    <footer>— Максим, розробник</footer>
-  </blockquote>
-</section>
-
 
   <aside>
     <h3>Контакти</h3>

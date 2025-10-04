@@ -1,0 +1,156 @@
+/* ====== Загальні стилі ====== */
+* {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 56px; /* було 100px */
+}
+
+/* ====== Фіксований хедер ====== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Додає простір між логотипом і меню */
+  padding: 6px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Додає простір між логотипом і навігацією */
+  width: 100%;
+}
+
+/* === Логотип і назва === */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title img {
+  width: 32px; /* було 55px */
+  height: auto;
+}
+
+.logo-title h1 {
+  font-size: 1.05rem; /* було 1.6rem */
+  color: #111;
+  font-weight: 700;
+}
+
+/* === Меню === */
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+
+
+/* ====== Основна частина ====== */
+main {
+  margin-top: 70px; /* було 140px */
+  padding: 30px 60px;
+}
+
+/* ====== Секція з проєктами ====== */
+article h2 {
+  font-size: 30px;
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+ol li {
+  border: 2px solid #0b2c6b;
+  border-bottom: 5px double #0b2c6b; /* нижня межа подвійна */
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Назва проєкту — більша, жирна, курсив */
+ol li h3 {
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
+  color: #007bff;
+  margin-top: 0;
+}
+
+/* ====== Зображення ====== */
+ol li img {
+  border-radius: 6px;
+  margin: 10px 0;
+  transition: filter 0.4s ease;
+}
+
+ol li img:hover {
+  filter: grayscale(100%);
+}
+
+/* ====== Посилання ====== */
+a {
+  color: #cc6600; /* темно-помаранчевий */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Футер ====== */
+footer {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
