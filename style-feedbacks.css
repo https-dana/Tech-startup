@@ -1,0 +1,208 @@
+/* === Загальні стилі === */
+* {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 56px; 
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-title img {
+  width: 32px;
+  height: auto;
+}
+
+.logo-title h1 {
+  font-size: 1.05rem;
+  color: #111;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+main {
+  margin-top: 70px;
+  padding: 30px 60px;
+}
+
+/* === Головний контейнер сторінки === */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* === Стиль форми зворотнього зв’язку === */
+article {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 30px 40px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+article h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+/* === Flex для полів форми === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+legend {
+  font-weight: 600;
+  color: #007bff;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+input[type="checkbox"] {
+  accent-color: #007bff;
+}
+
+/* === Кнопки === */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"] {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.25);
+}
+
+button[type="submit"]:hover {
+  background: #00bfff;
+  transform: translateY(-2px);
+}
+
+button[type="reset"] {
+  background: #dc3545;
+  color: #fff;
+}
+
+button[type="reset"]:hover {
+  background: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+/* === Адаптивність === */
+@media (max-width: 768px) {
+  article {
+    padding: 20px;
+  }
+
+  fieldset {
+    padding: 0.8rem 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
