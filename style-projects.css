@@ -1,274 +1,24 @@
-
+/* ===== СКИДАННЯ СТИЛІВ ===== */
 * {  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Inter", "Segoe UI", sans-serif;
-  background-color: #f8f9fb;
-  color: #222;
-  line-height: 1.6;
-  padding-top: 56px; 
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-title img {
-  width: 32px;
-  height: auto;
-}
-
-.logo-title h1 {
-  font-size: 1.05rem;
-  color: #111;
-  font-weight: 700;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-nav ul {
-  display: flex;
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  font-size: 1.05rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #007bff;
-}
-
-main {
-  margin-top: 70px;
-  padding: 30px 60px;
-}
-
-article h2 {
-  font-size: 30px;
-  color: #007bff;
-  border-bottom: 3px solid #007bff;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-bottom: 25px;
-}
-
-ol {
-  list-style: none;
-  padding-left: 0;
-}
-
-ol li {
-  background: #f8f9f9; 
-  border-left: 4px solid #00d8ff; 
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-ol li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 216, 255, 0.5);
-}
-
-ol li h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-style: italic;
-  color: #007bff;
-  margin-bottom: 8px;
-}
-
-ol li p {
-  font-size: 0.95rem;
-  color: #0b2c50;
-  margin-bottom: 12px;
-}
-
-ol li img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 12px;
-  transition: filter 0.4s ease, transform 0.4s ease;
-}
-
-ol li img:hover {
-  filter: grayscale(100%);
-  transform: scale(1.05);
-}
-
-ol li ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ol li ul li {
-  background: #0b2c50;
-  border-left: 3px solid #00d8ff;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  padding: 8px 12px;
-  color: #c0eaff;
-  transition: background 0.3s, transform 0.3s;
-}
-
-ol li ul li:hover {
-  background: #007bff;
-  color: white;
-  transform: translateX(3px);
-}
-
-a {
-  color: #0b2c50;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin-top: 20px;
-  background-color: #0b1f3a;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-  font-size: 0.95rem;
-  color: #e0e0e0;
-}
-
-table caption {
-  caption-side: top;
-  text-align: left;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #00d8ff;
-  padding: 12px 15px;
-  border-bottom: 2px solid #00d8ff;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  transition: background 0.3s, color 0.3s;
-}
-
-th {
-  background-color: #007bff; 
-  color: #ffffff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-tbody tr {
-  border-bottom: 1px solid #1a2a50;
-}
-
-tbody tr:hover {
-  background: linear-gradient(90deg, rgba(0,123,255,0.2), rgba(0,216,255,0.2));
-  color: #ffffff;
-  cursor: default;
-}
-
-td {
-  position: relative;
-}
-
-tfoot td {
-  background-color: #00102a;
-  color: #66d9ff;
-  font-style: italic;
-  border-top: 2px solid #00d8ff;
-}
-
-
-a {
-  color: #0b2c50; 
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  background-color: #007bff;
-  color: white;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
-
-/*
-* {  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f5f7fa;
   color: #222;
+  line-height: 1.6;
 }
 
+/* ===== ХЕДЕР (НАЗВА + ЛОГОТИП ФІКСОВАНІ ЗВЕРХУ) ===== */
 header {
-  position: fixed;
+  position: fixed;                 /* фіксований зверху — вимога варіанту */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0b2c6b; 
+  background-color: #0b2c6b;
   color: white;
   display: flex;
   align-items: center;
@@ -289,6 +39,7 @@ header img {
   height: auto;
 }
 
+/* Навігація у хедері */
 nav ul {
   list-style: none;
   display: flex;
@@ -298,7 +49,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #ff8c00; 
+  color: #ff8c00;         /* темно-помаранчеві посилання у меню */
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -308,13 +59,20 @@ nav ul li a:hover {
   color: #ffd08a;
 }
 
-
+/* ===== ОСНОВНИЙ КОНТЕНТ ===== */
 main {
-  margin-top: 140px; 
+  margin-top: 140px;      /* щоб не залазити під фіксований хедер */
   padding: 30px 60px;
+  display: grid;
+  justify-content: center;
 }
 
+article {
+  max-width: 1200px;
+  width: 100%;
+}
 
+/* Заголовок розділу */
 article h2 {
   font-size: 30px;
   color: #0b2c6b;
@@ -324,51 +82,82 @@ article h2 {
   margin-bottom: 25px;
 }
 
-ol {
-  list-style: decimal;
-  padding-left: 20px;
+/* ===== GRID ДЛЯ СПИСКУ ПРОЄКТІВ ===== */
+
+article > ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-ol li {
-  border: 2px solid #0b2c6b;
-  border-bottom: 5px double #0b2c6b; 
+/* Картка одного проєкту (grid-елемент) */
+article > ol > li {
+  border: 2px solid #0b2c6b;          /* темно-синя рамка */
+  border-bottom: 5px double #0b2c6b;  /* нижня межа подвійна — вимога */
   border-radius: 8px;
   padding: 15px 20px;
-  margin-bottom: 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-ol li h3 {
-  font-size: 22px;
-  font-weight: 700;
-  font-style: italic;
+/* Назва проєкту */
+article > ol > li h3 {
+  font-size: 22px;        /* більша висота гліфів */
+  font-weight: 700;       /* більша вага шрифту */
+  font-style: italic;     /* похилий — за умовою */
   color: #0b2c6b;
-  margin-top: 0;
+  margin: 0 0 10px;
 }
 
+/* Текст в картці */
+article > ol > li p {
+  font-size: 0.95rem;
+  color: #0b2c50;
+  margin-bottom: 10px;
+}
 
-ol li img {
+/* Список фіч/характеристик проєкту */
+article > ol > li ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+/* Зображення проєкту з анімацією до ч/б */
+article > ol > li img {
+  width: 100%;
   border-radius: 6px;
   margin: 10px 0;
-  transition: filter 0.4s ease;
+  transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-ol li img:hover {
-  filter: grayscale(100%);
+article > ol > li img:hover {
+  filter: grayscale(100%);   /* стає чорно-білим на hover — вимога */
+  transform: scale(1.03);
 }
 
-a {
-  color: #cc6600; 
+/* Посилання всередині main (повернення на Головну) */
+main a:link {
+  color: #cc6600;            /* темно-помаранчевий для непереглянутих */
+}
+
+main a:visited {
+  color: #663300;            /* можна зробити трохи темнішим */
+}
+
+main a {
   text-decoration: none;
   font-weight: 600;
 }
 
-a:hover {
+main a:hover {
   text-decoration: underline;
 }
 
+/* ===== ФУТЕР ===== */
 footer {
   text-align: center;
   background-color: #0b2c6b;
@@ -377,4 +166,4 @@ footer {
   margin-top: 40px;
   font-size: 14px;
   letter-spacing: 0.5px;
-}*/
+}

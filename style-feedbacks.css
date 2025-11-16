@@ -1,4 +1,4 @@
-/* === Загальні стилі === */
+/* ===== СКИДАННЯ СТИЛІВ ===== */
 * {  
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ body {
   padding-top: 56px; 
 }
 
+/* ===== ХЕДЕР ===== */
 header {
   position: fixed;
   top: 0;
@@ -27,33 +28,14 @@ header {
   z-index: 1000;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+header h1 {
+  font-size: 1.4rem;
+  margin-right: 16px;
 }
 
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-title img {
-  width: 32px;
+header img {
+  width: 120px;
   height: auto;
-}
-
-.logo-title h1 {
-  font-size: 1.05rem;
-  color: #111;
-  font-weight: 700;
-}
-
-nav {
-  display: flex;
-  align-items: center;
 }
 
 nav ul {
@@ -76,45 +58,46 @@ nav a:hover {
   color: #007bff;
 }
 
+/* ===== FLEX-КОНТЕЙНЕР ДЛЯ ВСІЄЇ СТОРІНКИ ===== */
 main {
   margin-top: 70px;
   padding: 30px 60px;
+  display: flex;                  /* flex-контейнер */
+  flex-flow: row wrap;            /* напрям + перенесення */
+  justify-content: center;        /* вирівнювання по головній осі */
+  align-items: flex-start;        /* вирівнювання по поперечній осі */
+  align-content: flex-start;      /* вирівнювання рядків при wrap */
+  gap: 2rem;
 }
 
-/* === Головний контейнер сторінки === */
-main {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
-
-/* === Стиль форми зворотнього зв’язку === */
+/* Основний блок статті/форми — flex-елемент */
 article {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 30px 40px;
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
-  display: flex;
+  display: flex;                  /* теж flex-контейнер */
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1 1 500px;                /* flex-grow, flex-shrink, flex-basis */
 }
 
 article h2 {
   text-align: center;
   font-size: 1.6rem;
   color: #007bff;
-  margin-bottom: 1rem;
 }
 
-/* === Flex для полів форми === */
+/* ===== FLEX ДЛЯ ФОРМИ ===== */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: flex;                  /* form — flex-контейнер */
+  flex-flow: row wrap;
+  gap: 1rem 2rem;
 }
 
+/* fieldset — flex-елемент */
 fieldset {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -122,6 +105,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  flex: 1 1 260px;                /* grow + shrink + базова ширина */
 }
 
 legend {
@@ -134,6 +118,7 @@ label {
   margin-bottom: 0.3rem;
 }
 
+/* Поля вводу */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -147,6 +132,12 @@ textarea {
   transition: all 0.3s ease;
 }
 
+/* textarea як гнучкий елемент, що розтягується */
+textarea {
+  min-height: 120px;
+  flex-grow: 1;                   /* приклад flex-grow */
+}
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -155,11 +146,19 @@ textarea:focus {
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
 }
 
+/* чекбокси */
 input[type="checkbox"] {
   accent-color: #007bff;
 }
 
-/* === Кнопки === */
+/* Блоки поза fieldset (мета, деталі, згода) як flex-елементи */
+#purpose,
+#details,
+[name="consent"] {
+  flex-shrink: 1;                  /* приклад flex-shrink */
+}
+
+/* Кнопки — теж flex-елементи форми */
 button {
   padding: 10px 18px;
   border: none;
@@ -171,10 +170,19 @@ button {
   margin-top: 0.5rem;
 }
 
+/* submit — основний акцент */
 button[type="submit"] {
   background: #007bff;
   color: #fff;
   box-shadow: 0 2px 5px rgba(0, 123, 255, 0.25);
+}
+
+/* reset — з іншим порядком і align-self */
+button[type="reset"] {
+  background: #dc3545;
+  color: #fff;
+  order: -1;                      /* приклад order — кнопка reset зліва */
+  align-self: flex-start;         /* своя лінія вирівнювання */
 }
 
 button[type="submit"]:hover {
@@ -182,27 +190,16 @@ button[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-button[type="reset"] {
-  background: #dc3545;
-  color: #fff;
-}
-
 button[type="reset"]:hover {
   background: #ff6b6b;
   transform: translateY(-2px);
 }
 
-/* === Адаптивність === */
-@media (max-width: 768px) {
-  article {
-    padding: 20px;
-  }
-
-  fieldset {
-    padding: 0.8rem 1rem;
-  }
-
-  button {
-    width: 100%;
-  }
+/* Футер (якщо додаси) */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
