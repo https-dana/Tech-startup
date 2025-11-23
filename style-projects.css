@@ -1,4 +1,4 @@
-/* ===== СКИДАННЯ СТИЛІВ ===== */
+
 * {  
   margin: 0;
   padding: 0;
@@ -12,9 +12,9 @@ body {
   line-height: 1.6;
 }
 
-/* ===== ХЕДЕР (НАЗВА + ЛОГОТИП ФІКСОВАНІ ЗВЕРХУ) ===== */
+
 header {
-  position: fixed;                 /* фіксований зверху — вимога варіанту */
+  position: fixed;                 
   top: 0;
   left: 0;
   width: 100%;
@@ -49,7 +49,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #ff8c00;         /* темно-помаранчеві посилання у меню */
+  color: #ff8c00;         
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -59,9 +59,8 @@ nav ul li a:hover {
   color: #ffd08a;
 }
 
-/* ===== ОСНОВНИЙ КОНТЕНТ ===== */
 main {
-  margin-top: 140px;      /* щоб не залазити під фіксований хедер */
+  margin-top: 140px;     
   padding: 30px 60px;
   display: grid;
   justify-content: center;
@@ -72,7 +71,7 @@ article {
   width: 100%;
 }
 
-/* Заголовок розділу */
+
 article h2 {
   font-size: 30px;
   color: #0b2c6b;
@@ -82,7 +81,7 @@ article h2 {
   margin-bottom: 25px;
 }
 
-/* ===== GRID ДЛЯ СПИСКУ ПРОЄКТІВ ===== */
+
 
 article > ol {
   list-style: none;
@@ -93,10 +92,10 @@ article > ol {
   gap: 24px;
 }
 
-/* Картка одного проєкту (grid-елемент) */
+
 article > ol > li {
-  border: 2px solid #0b2c6b;          /* темно-синя рамка */
-  border-bottom: 5px double #0b2c6b;  /* нижня межа подвійна — вимога */
+  border: 2px solid #0b2c6b;          
+  border-bottom: 5px double #0b2c6b;  
   border-radius: 8px;
   padding: 15px 20px;
   background-color: #ffffff;
@@ -105,28 +104,28 @@ article > ol > li {
 
 /* Назва проєкту */
 article > ol > li h3 {
-  font-size: 22px;        /* більша висота гліфів */
-  font-weight: 700;       /* більша вага шрифту */
-  font-style: italic;     /* похилий — за умовою */
+  font-size: 22px;     
+  font-weight: 700;       
+  font-style: italic;    
   color: #0b2c6b;
   margin: 0 0 10px;
 }
 
-/* Текст в картці */
+
 article > ol > li p {
   font-size: 0.95rem;
   color: #0b2c50;
   margin-bottom: 10px;
 }
 
-/* Список фіч/характеристик проєкту */
+
 article > ol > li ul {
   list-style: disc;
   padding-left: 20px;
   margin-top: 8px;
 }
 
-/* Зображення проєкту з анімацією до ч/б */
+
 article > ol > li img {
   width: 100%;
   border-radius: 6px;
@@ -135,17 +134,17 @@ article > ol > li img {
 }
 
 article > ol > li img:hover {
-  filter: grayscale(100%);   /* стає чорно-білим на hover — вимога */
+  filter: grayscale(100%);   /* стає чорно-білим на hover  */
   transform: scale(1.03);
 }
 
-/* Посилання всередині main (повернення на Головну) */
+
 main a:link {
-  color: #cc6600;            /* темно-помаранчевий для непереглянутих */
+  color: #cc6600;           
 }
 
 main a:visited {
-  color: #663300;            /* можна зробити трохи темнішим */
+  color: #663300;          
 }
 
 main a {
@@ -167,3 +166,51 @@ footer {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
+
+/* ===== Карусель проєктів ===== */
+.projects-carousel {
+  margin-top: 140px; /* щоб не ховалось під фіксований хедер */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-window {
+  max-width: 60%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#carousel-image {
+  max-width: 100%;
+  max-height: 20vw; /* не більше 20% ширини вікна */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.carousel-btn {
+  background: #0b2c6b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: #1650b5;
+}
+
+/* невелика поправка: щоб main не залазив під карусель */
+main {
+  padding-top: 20px;
+}
+

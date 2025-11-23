@@ -9,26 +9,28 @@
 
 <body>
   <header>
-    <div class="header-container">
-      <div class="logo-title">
-        <img src="image/logo.png" alt="Логотип Tech Start-up" class="logo">
-        <h1>Tech Start-up</h1>
+  <div class="header-container">
+    <div class="logo-title">
+      <img src="image/logo.png" alt="Логотип Tech Start-up" class="logo">
+      <div class="title-wrapper">
+        <h1 id="site-title">Tech Start-up</h1>
+        <p id="motto"></p> <!-- девіз буде самодрукуватись через JS -->
       </div>
-
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="projects.html">Проєкти</a></li>
-          <li><a href="#reviews">Відгуки</a></li>
-          <li><a href="feedback.html">Зворотній зв’язок</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <a href="#cabinet" class="btn-filled">Перейти у власний кабінет</a>
-          <a href="#register" class="btn-outline">Зареєструватися</a>
-        </div>
-      </nav>
     </div>
-  </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="projects.html">Проєкти</a></li>
+        <li><a href="#reviews">Відгуки</a></li>
+        <li><a href="feedback.html">Зворотній зв’язок</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+      </div>
+    </nav>
+  </div>
+</header>
 
   <main>
     <section id="about">
@@ -51,7 +53,7 @@
     </section>
 
     <section id="founders">
-      <h2>Засновники</h2>
+  <h2>Засновники</h2>
       <table>
         <caption>Засновники Tech Start-up</caption>
         <thead>
@@ -75,6 +77,27 @@
         </tfoot>
       </table>
     </section>
+
+    <div class="founders-photos">
+    <figure>
+      <img src="image/WCEO.jpg"
+           alt="Олена К."
+           class="founder-img"
+           data-riddle="Я говорю всіма мовами світу, але ніколи не промовляю жодного слова. Що це?"
+           data-answer="Код">
+      <figcaption>Олена К., CEO</figcaption>
+    </figure>
+
+    <figure>
+      <img src="image/MCEO.jpg"
+           alt="Максим П."
+           class="founder-img"
+           data-riddle="Що завжди росте, але ніколи не старіє?"
+           data-answer="Технології">
+      <figcaption>Максим П., CTO</figcaption>
+    </figure>
+  </div>
+</section>
 
     <section id="reviews">
       <h2>Відгуки про нас</h2>
@@ -106,5 +129,8 @@
     <p>&copy; 2025 Tech Start-up. Усі права захищено.</p>
     <p><a href="#founders">Засновники</a></p>
   </footer>
+</body>
+</html>
+<script src="index.js"></script>
 </body>
 </html>

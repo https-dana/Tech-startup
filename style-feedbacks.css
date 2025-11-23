@@ -1,4 +1,4 @@
-/* ===== СКИДАННЯ СТИЛІВ ===== */
+
 * {  
   margin: 0;
   padding: 0;
@@ -13,7 +13,6 @@ body {
   padding-top: 56px; 
 }
 
-/* ===== ХЕДЕР ===== */
 header {
   position: fixed;
   top: 0;
@@ -58,19 +57,18 @@ nav a:hover {
   color: #007bff;
 }
 
-/* ===== FLEX-КОНТЕЙНЕР ДЛЯ ВСІЄЇ СТОРІНКИ ===== */
 main {
   margin-top: 70px;
   padding: 30px 60px;
-  display: flex;                  /* flex-контейнер */
-  flex-flow: row wrap;            /* напрям + перенесення */
-  justify-content: center;        /* вирівнювання по головній осі */
-  align-items: flex-start;        /* вирівнювання по поперечній осі */
-  align-content: flex-start;      /* вирівнювання рядків при wrap */
+  display: flex;                  
+  flex-flow: row wrap;             
+  justify-content: center;        
+  align-items: flex-start;        
+  align-content: flex-start;      
   gap: 2rem;
 }
 
-/* Основний блок статті/форми — flex-елемент */
+
 article {
   background: #fff;
   border-radius: 12px;
@@ -78,10 +76,10 @@ article {
   padding: 30px 40px;
   max-width: 800px;
   width: 100%;
-  display: flex;                  /* теж flex-контейнер */
+  display: flex;                  
   flex-direction: column;
   gap: 1.5rem;
-  flex: 1 1 500px;                /* flex-grow, flex-shrink, flex-basis */
+  flex: 1 1 500px;               
 }
 
 article h2 {
@@ -90,7 +88,7 @@ article h2 {
   color: #007bff;
 }
 
-/* ===== FLEX ДЛЯ ФОРМИ ===== */
+
 form {
   display: flex;                  /* form — flex-контейнер */
   flex-flow: row wrap;
@@ -135,7 +133,7 @@ textarea {
 /* textarea як гнучкий елемент, що розтягується */
 textarea {
   min-height: 120px;
-  flex-grow: 1;                   /* приклад flex-grow */
+  flex-grow: 1;                  
 }
 
 input:focus,
@@ -155,10 +153,10 @@ input[type="checkbox"] {
 #purpose,
 #details,
 [name="consent"] {
-  flex-shrink: 1;                  /* приклад flex-shrink */
+  flex-shrink: 1;                  
 }
 
-/* Кнопки — теж flex-елементи форми */
+
 button {
   padding: 10px 18px;
   border: none;
@@ -170,19 +168,18 @@ button {
   margin-top: 0.5rem;
 }
 
-/* submit — основний акцент */
 button[type="submit"] {
   background: #007bff;
   color: #fff;
   box-shadow: 0 2px 5px rgba(0, 123, 255, 0.25);
 }
 
-/* reset — з іншим порядком і align-self */
+
 button[type="reset"] {
   background: #dc3545;
   color: #fff;
-  order: -1;                      /* приклад order — кнопка reset зліва */
-  align-self: flex-start;         /* своя лінія вирівнювання */
+  order: -1;                     
+  align-self: flex-start;         
 }
 
 button[type="submit"]:hover {
@@ -202,4 +199,35 @@ footer {
   color: #666;
   font-size: 0.9rem;
   margin-top: 40px;
+}
+
+/* ===== Обгортка поля "Детально" + tooltip ===== */
+.details-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+#details {
+  flex: 1;
+}
+
+/* спочатку tooltip схований */
+.tooltip {
+  position: absolute;
+  top: 4px;
+  right: -280px;
+  max-width: 260px;
+  background: #fff8e1;
+  color: #333;
+  border: 1px solid #f0c14b;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }

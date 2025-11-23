@@ -42,32 +42,38 @@
 
 <label for="education">Освіта:</label><br>
 <select id="education" name="education">
-<option value="повна">повна</option>
-<option value="неповна">неповна</option>
-<option value="вища">вища</option>
-<option value="професійна">професійна</option>
+<option value="Повна">Повна</option>
+<option value="Неповна">Неповна</option>
+<option value="Вища">Вища</option>
+<option value="Професійна">Професійна</option>
 </select><br>
 
 
 <p>Інтереси:</p>
-<label><input type="checkbox" name="interests" value="науковець"> науковець</label><br>
-<label><input type="checkbox" name="interests" value="інвестор"> інвестор</label><br>
-<label><input type="checkbox" name="interests" value="промоутер"> промоутер</label><br>
-<label><input type="checkbox" name="interests" value="держслужбовець"> держслужбовець</label><br>
+<label><input type="checkbox" name="interests" value="Науковець"> Науковець</label><br>
+<label><input type="checkbox" name="interests" value="Інвестор"> Інвестор</label><br>
+<label><input type="checkbox" name="interests" value="Промоутер"> Промоутер</label><br>
+<label><input type="checkbox" name="interests" value="Держслужбовець"> Держслужбовець</label><br>
 </fieldset>
 
 
 <label for="purpose">Мета зворотнього зв'язку:</label><br>
 <select id="purpose" name="purpose">
-<option value="співпраця">співпраця</option>
-<option value="скарга">скарга на порушення</option>
-<option value="пропозиція">пропозиція</option>
-<option value="помилка">помилка</option>
+<option value="Співпраця">Співпраця</option>
+<option value="Скарга">Скарга на порушення</option>
+<option value="Пропозиція">Пропозиція</option>
+<option value="Помилка">Помилка</option>
 </select><br>
 
 
 <label for="details">Детально:</label><br>
-<textarea id="details" name="details" cols="60" rows="6" maxlength="1000"></textarea><br>
+<div class="details-wrapper">
+  <textarea id="details" name="details" cols="60" rows="6" maxlength="1000"></textarea>
+  <div id="details-tooltip" class="tooltip" aria-hidden="true">
+    Вдячні за Ваш час! Конкретизуйте мету звернення, будь ласка
+  </div>
+</div>
+<br>
 
 
 <label><input type="checkbox" name="consent" required> Я даю згоду на обробку інформації</label><br>
@@ -77,3 +83,6 @@
 <button type="reset">Очистити</button>
 </form>
 </article>
+<script src="feedback.js"></script>
+</body>
+</html>
